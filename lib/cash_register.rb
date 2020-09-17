@@ -5,7 +5,7 @@ class CashRegister
   attr_reader :discount
   
   
-  def initialize(discount = "0")
+  def initialize(discount = 0)
     @total = 0
     @discount = discount
   end
@@ -15,6 +15,8 @@ class CashRegister
   end
   
   def apply_discount
+    if discount = 0
+      
     @total = @total * (1 - (discount/100))
   end
   
