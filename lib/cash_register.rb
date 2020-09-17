@@ -10,6 +10,6 @@ class CashRegister
     @discount = discount
   end
   
-  
+  def 
   
 end
