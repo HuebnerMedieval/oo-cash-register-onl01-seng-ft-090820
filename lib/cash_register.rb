@@ -33,7 +33,8 @@ class CashRegister
   end
   
   def void_last_transaction
-    
+    @last_transaction["Quantity"].times {self.items.pop}
+    @total = @total - (@last_transaction["Quantity"] * @last_transaction["Price"])
   end
   
 end
